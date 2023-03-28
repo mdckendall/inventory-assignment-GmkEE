@@ -19,9 +19,7 @@ class Main {
     Scanner s = new Scanner(System.in);
     ArrayList<Inventory> storage = new ArrayList<Inventory>();
     
-
     do {
-
       System.out.println("Press 1 to add an item");
       System.out.println("Press 2 to delete an item.");
       System.out.println("Press 3 to update an item.");
@@ -29,7 +27,6 @@ class Main {
       System.out.println("Press 5 to quit the program.");
       input = s.nextInt();
 
-      
       switch (input) {
 
         case 1:
@@ -40,14 +37,10 @@ class Main {
             serialNumber = s.nextLine();
           System.out.println("Enter the value in dollars (whole number): ");
             value = s.nextInt();
-            
           storage.add(new Inventory(name, serialNumber, value));
-          
           break;
           
-          
         case 2:
-
           System.out.println("Enter the serial number of the item to delete: ");
             s.nextLine(); //need 
             String serialNumberDelete = s.nextLine();
@@ -59,9 +52,7 @@ class Main {
           }
           break;
 
-          
         case 3:
-          
           System.out.println("Enter the serial number of the item to change: ");
             s.nextLine(); //need 
             String serialNumberChange = s.nextLine();
@@ -78,17 +69,13 @@ class Main {
           }
           break;
 
-          
         case 4:
-          
           for(int i=0;i<storage.size();i++) {
-            System.out.println(storage.get(i).name + ", " + storage.get(i).serialNumber + ", $" + storage.get(i).value + "\n");
+            System.out.println(storage.get(i).name + "," + storage.get(i).serialNumber + "," + storage.get(i).value + "\n");
           }
           break;                     
-          
       }
     } 
-    
     while(input!=(5));
       s.close();
   } 
