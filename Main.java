@@ -80,9 +80,9 @@ class Main {
 
           
         case 4:
-
+          
           for(int i=0;i<storage.size();i++) {
-            System.out.println(storage.get(i).name + ", " + storage.get(i).serialNumber + ", $" + storage.get(i).value);
+            System.out.println(storage.get(i).name + ", " + storage.get(i).serialNumber + ", $" + storage.get(i).value + "\n");
           }
           break;                     
           
@@ -91,6 +91,11 @@ class Main {
     
     while(input!=(5));
       s.close();
-  }
+  } 
 }
+
+
+
+
+
 
